@@ -1,0 +1,8 @@
+Summer Camp
+Abigail, Oliver, Rosa, and Blake all attend the same summer camp, where they can cook, kayak, rock climb, and zip-line. Each child has a different favorite activity.
+* 		Abigail’s favorite activity isn’t rock climbing. (Zl)cook, kayaks, zl
+* 		Oliver is afraid of heights. (kayak) cook, kayak
+* 		Rosa can’t do her favorite activity without a harness. (rock)rock,zl
+* 		Blake likes to keep his feet on the ground at all times. (cook)
+
+Can you figure out who likes what? 
