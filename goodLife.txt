@@ -1,0 +1,25 @@
+The Good Life
+
+Each of five neighborhood dogs (Saber, Ginger, Nutmeg, Pepper, and Bear) is enjoying one of the following activities: 
+1. getting its ears scratched
+2. playing catch
+3. taking a nap
+4. burying a chew toy
+5. and going for a walk.
+
+
+* 		Pepper is either playing catch or burying a chew toy.(2,4) 
+* 		Neither Ginger nor Saber nor Bear is on a walk.(1-4)
+* 		One of the dogs named after a spice is getting its ears scratched.(1)
+* 		A dog not named for a spice is playing catch.(saber, bear)
+* 		Bear is getting some exercise.(2,4,5)
+
+Can you figure out what each pooch is doing? 
+
+# Answer 
+
+1. getting its ears scratched, (ginger)
+2. playing catch (bear)
+3. taking a nap (saber)
+4. burying a chew toy (pepper)
+5. and going for a walk. (nutmeg)

@@ -1,0 +1,2 @@
+git config [--global] user.name "Desmond English"
+git config [--global] user.email "desmond389@revature.net"
