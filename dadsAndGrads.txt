@@ -1,0 +1,23 @@
+Dads and Grads
+
+A joint Father’s Day and graduation party is being thrown for Michael, Ken, James, Alberto, Elias, and Stephanie. Three of them are newly minted high school graduates. The other three are their dads.
+* 		Stephanie went to the senior prom with Michael’s son.
+* 		Elias and James played on the school’s baseball team. One of them is Alberto’s son.
+* 		Michael and Elias are not related.
+Can you match the high school graduates to their fathers at this joint celebration? 
+
+# 6 people 
+
+# Michael and Elias not related. 
+
+# Elias or James = Alberto son
+
+# Children:
+Elias 
+James
+Stephanie 
+
+# Answer 
+Alberto is a father! =  (Elias)
+Michael is a father! = (James)
+Ken is a father! = (Stephanie)
