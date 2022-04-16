@@ -3,3 +3,5 @@
 Projects:
 
 Logic Puzzles 🧩 🧠
+
+HackerRank - Shell Scripting 📝
