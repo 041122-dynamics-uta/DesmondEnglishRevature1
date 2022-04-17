@@ -4,4 +4,4 @@ Projects:
 
 Logic Puzzles 🧩 🧠
 
-HackerRank - Shell Scripting 📝
+HackerRank - Shell Scripting 💻 📝
