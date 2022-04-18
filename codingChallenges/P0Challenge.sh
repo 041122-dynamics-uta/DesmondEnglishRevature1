@@ -22,7 +22,7 @@ blue="\033[34m"
 
 
 #Greeting
-echo '\n  	Welcome User to "The Calculator", What shall I call you human? \n'  
+echo '\n  	Welcome User to "The Calculator", What shall I call you human? \n '  
 
 read input  
 
