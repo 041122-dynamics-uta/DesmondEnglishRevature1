@@ -1,4 +1,3 @@
-
 #1.The user starts the bash script.
 
 #2.The script welcomes the user
@@ -36,7 +35,7 @@ while [ true ]
 do
 
 #Calculation Options
-echo "	 'a' Addition | 's' Subtracton | 'm' Multiplication | 'd' Division | 'q' Quit ${nc}"
+echo "	 'a' Addition | 's' Subtracton | 'm' Multiplication | 'd' Division | 'q' Quit "
 echo "\nEnter Your Choice\n"
 read c 
 
@@ -79,5 +78,4 @@ then echo "Enter first number.\n"
 else [ $c == "q" ];
 	exit
 fi
-
 done
