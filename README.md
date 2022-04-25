@@ -4,4 +4,6 @@ Projects:
 
 Logic Puzzles 🧩 🧠
 
-HackerRank - Shell Scripting 💻 📝
+HackerRank Challenges  💻 📝
+
+P0 Bash Command Calculator 🧮
