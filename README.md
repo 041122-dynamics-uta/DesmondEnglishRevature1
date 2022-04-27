@@ -1,9 +1,17 @@
 # DesmondEnglishRevature1
 
-Projects:
+Projects Folder:
 
-Logic Puzzles 🧩 🧠
+Demos👨🏽‍💻: 
+oopDemo
+switchDemo
 
-HackerRank Challenges  💻 📝
+Logic Puzzles🧩🧠:
+.txt files
 
-P0 Bash Command Calculator 🧮
+HackerRank Challenges💻📝:
+1.Bash Script Challenges
+2.C# Challenges
+
+P0:
+Bash Command Calculator 🧮
