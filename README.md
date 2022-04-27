@@ -2,8 +2,7 @@
 
 Projects Folder:
 
-Demos👨🏽‍💻: 
-oopDemo
+Demos👨🏽‍💻:
 switchDemo
 
 Logic Puzzles🧩🧠:
