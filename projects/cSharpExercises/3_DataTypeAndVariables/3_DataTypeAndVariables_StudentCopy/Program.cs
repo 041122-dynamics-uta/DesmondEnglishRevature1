@@ -23,7 +23,6 @@ namespace _3_DataTypeAndVariablesChallenge
         long l = 9223372036854775807;
         ulong ul = 18446744073709551615;
 
-
         Console.WriteLine(PrintValues(b));
         Console.WriteLine(PrintValues(sb));
         Console.WriteLine(PrintValues(num));
@@ -56,16 +55,59 @@ namespace _3_DataTypeAndVariablesChallenge
         public static string PrintValues(object obj)
         {
             //throw new NotImplementedException($"PrintValues() has not been implemented");
-            switch(obj)
+            
+            string s = "";
+            switch(Type.GetTypeCode(obj.GetType()))
              {
-                case string tx:
-                    tx = "Data Type => String";
-                    return tx;
-
-                default: 
-                    break;
+                case TypeCode.String:
+                    s = "Data type => string";
+                    return s;
+                case TypeCode.Int32:
+                    s = "Data type => int";
+                    return s;
+                case TypeCode.UInt64 :
+                    s = "Data type => ulong";
+                    return s;
+                case TypeCode.Byte:
+                    s = "Data type => byte";
+                    return s;
+                case TypeCode.SByte:
+                    s = "Data type => sbyte";
+                    return s;
+                case TypeCode.UInt32:
+                    s = "Data type => uint";
+                    return s;
+                case TypeCode.Int16:
+                    s = "Data type => short";
+                    return s;
+                case TypeCode.UInt16:
+                    s = "Data type => ushort";
+                    return s;
+                case TypeCode.Int64:
+                    s = "Data type => long";
+                    return s;
+                case TypeCode.Single:
+                    s = "Data type => float";
+                    return s;
+                case TypeCode.Double:
+                    s = "Data type => double";
+                    return s;
+                case TypeCode.Decimal:
+                    s = "Data type => decimal";
+                    return s;
+                case TypeCode.Char:
+                    s = "Data type => char";
+                    return s;
+                case TypeCode.Boolean:
+                    s = "Data type => bool";
+                    return s;
+                case TypeCode.Object:
+                    s = "Data type => object";
+                    return s;
+                default:
+                break;
              }
-            return null;
+            return s;
 
         }
         /// <summary>
