@@ -14,3 +14,5 @@ HackerRank Challenges💻📝:
 
 P0:
 Bash Command Calculator 🧮
+
+cSharpExercises:
