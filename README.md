@@ -3,16 +3,17 @@
 Projects Folder:
 
 Demos👨🏽‍💻:
-switchDemo
+/switchDemo
 
 Logic Puzzles🧩🧠:
-.txt files
+/.txt files
 
 HackerRank Challenges💻📝:
-1.Week #1 = Bash Script Challenges
-2.Week #3 = C# Challenges
+/Week #1 = Bash Script Challenges
+/Week #3 = C# Challenges
 
 P0:
-Bash Command Calculator 🧮
+/Bash Command Calculator 🧮
 
 cSharpExercises:
+/
