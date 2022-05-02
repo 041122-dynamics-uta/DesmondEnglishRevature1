@@ -7,38 +7,6 @@ namespace _3_DataTypeAndVariablesChallenge
         public static void Main(string[] args)
         {
 
-        byte b = 255;
-        sbyte sb = -128;
-        int num = 2147483647;
-        uint ui = 4294967295;
-        short sh = -32768;
-        ushort us = 65535;
-        float f = 31.1289f;
-        double d = 12.1231250;
-        char c = 'N';
-        bool both = true;
-        string tx = "I control text";
-        string ts = "23";
-        decimal dec = 3.001002003m;
-        long l = 9223372036854775807;
-        ulong ul = 18446744073709551615;
-
-        Console.WriteLine(PrintValues(b));
-        Console.WriteLine(PrintValues(sb));
-        Console.WriteLine(PrintValues(num));
-        Console.WriteLine(PrintValues(ui));
-        Console.WriteLine(PrintValues(sh));
-        Console.WriteLine(PrintValues(us));
-        Console.WriteLine(PrintValues(f));
-        Console.WriteLine(PrintValues(d));
-        Console.WriteLine(PrintValues(c));
-        Console.WriteLine(PrintValues(both));
-        Console.WriteLine(PrintValues(tx));
-        Console.WriteLine(PrintValues(ts));
-        Console.WriteLine(PrintValues(dec));
-        Console.WriteLine(PrintValues(l));
-        Console.WriteLine(PrintValues(ul));
-
         }
 
         /// <summary>
