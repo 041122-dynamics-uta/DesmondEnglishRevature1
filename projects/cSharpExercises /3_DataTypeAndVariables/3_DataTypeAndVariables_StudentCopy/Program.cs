@@ -24,9 +24,11 @@ namespace _3_DataTypeAndVariablesChallenge
         {
             //throw new NotImplementedException($"PrintValues() has not been implemented");
             
+
             string s = "";
             switch(Type.GetTypeCode(obj.GetType()))
              {
+                 // public enum TypeCode - Specifies the type of an object.
                 case TypeCode.String:
                     s = "Data type => string";
                     return s;
