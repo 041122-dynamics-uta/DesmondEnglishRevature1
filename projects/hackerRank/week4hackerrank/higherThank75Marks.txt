@@ -1,0 +1,18 @@
+/*find the students who scored higher than 75 marks, order by last three letters, secondary sort by ascending ID */
+
+SELECT  
+
+    name
+
+FROM
+
+    STUDENTS
+
+WHERE 
+
+    marks > 75
+
+ORDER BY 
+
+    /*right(name,3), id;*/
+    SUBSTRING(Name, -3, 3) asc, id asc;
