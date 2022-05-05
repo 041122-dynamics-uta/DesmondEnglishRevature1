@@ -1,0 +1,11 @@
+/*
+'^' for beginning of search, '$' for end of search!. Seperate them for both the start and end vowels!!!
+*/
+
+SELECT DISTINCT CITY
+
+FROM STATION 
+
+WHERE CITY NOT REGEXP '^[aeiou]' 
+
+AND CITY NOT REGEXP '[aeiou]$';
