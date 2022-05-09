@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Fundamentals</title>
+    <link rel="stylesheet" href="csspractice.css">
+</head>
+</head>
+<body>
+        <header class="header">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
+           alt="HTML 5 Logo"  
+           id="header-img" 
+           width="100px"
+           height="100px">
+          <h1 id="title" class="text-center">About</h1>
+          <p id="description" class="description text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        </header>
+        
+
+        
+          </div class="location">
+          <h2>Our Locations</h2>
+          <ul>
+            <li>USA</li>
+              <ul>
+                <li><a href="https://en.wikipedia.org/wiki/New_York_City">New York</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/California">California</a> </li>
+                <li><a href="https://en.wikipedia.org/wiki/Austin,_Texas">Austin</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Philadelphia">Philidelphia</a></li>
+              </ul>
+          </ul>
+          <ul>
+            <li>World</li>
+            <ul>
+              <li><a href="https://en.wikipedia.org/wiki/Berlin">Berlin</a></li>
+              <li><a href="https://en.wikipedia.org/wiki/Tokyo">Toyko</a></li>
+            </ul>
+          </ul>
+          
+        <div>
+          <h2>Upcoming Classes</h2>
+          <table>
+            <thead> 
+            <tr>
+              <th>Location</th>
+              <th>Topic</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Berlin</td><td>Javascript & jQuery</td>
+              </tr>
+              <tr>
+                <td>Philidelphia</td><td>HTML & CSS</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+  
+        <h2>Sign up here!</h2>
+        <form id="survey-form">
+          <div>
+            <label id="name-label" for="name">Name</label>
+            <input 
+                   type="text"
+                   name="name"
+                   id="name"
+                   class="form-control"
+                   placeholder="Enter Your Name"
+                   required
+                   />
+          </div>
+          <div>
+            <label id="email-label" for="email">Email</label>
+            <input 
+                   type="email"
+                   name="email"
+                   id="email"
+                   class="form-control"
+                   placeholder="Enter Your Email"
+                   required
+                   />
+          </div>
+
+        <div class="dropdown">
+          <label for="location">Location:</label>
+          <select name= "mydropdown" id="mydropdownid">
+          <option value="0">New York</option>
+          <option value="I">California</option>
+          <option value="2">Austin</option>
+          <option value="3">Philidelphia</option>
+          <option value="4">Berlin</option>
+          <option value="5">Tokyo</option>
+          <option value="6">Space</option>
+        </select>
+        
+      </div>
+        <div class="gender">
+
+        </div>
+        <fieldset>
+          <legend>Gender:</legend>
+          <label for="checkbox1">Female</label>
+          <input type="checkbox" name="checkbox1" id="checkbox">
+          <label for="checkbox2">Male</label>
+          <input type="checkbox" name="checkbox2" id="checkbox">
+        </fieldset>
+        
+        
+        <div>
+          <p>Experience:</p>
+          <textarea
+                    placeholder="Enter text here...."
+                    name="comment"
+                    rows="12"
+                    cols="30">
+            </textarea>
+        </div>
+        
+        <div>
+          <button type="submit" id="submit" class="submit-button"> Sign Up
+          </button>
+        </div>
+            </form>
+        <div class="links">
+          <a href="https://twitter.com/i/flow/login">Twitter</a> |
+          <a href="https://www.facebook.com/">Facebook</a> |
+          <a href="https://www.facebook.com/">Flickr</a>
+        </div>
+</body>
+</html>
