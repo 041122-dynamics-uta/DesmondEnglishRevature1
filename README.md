@@ -4,6 +4,7 @@ Projects Folder:
 
 Demos👨🏽‍💻:
 /switchDemo
+/HTML & CSS Practice
 
 Logic Puzzles🧩🧠:
 /.txt files
