@@ -1,0 +1,9 @@
+/*
+difference between miscalculated from actual salary, calculate amount of error & round to next integer!
+CEIL(number)
+REPLACE(string, from_string, new_string)
+*/
+
+SELECT CEIL(AVG(Salary)-AVG(REPLACE(Salary,'0',''))) 
+
+FROM EMPLOYEES;
