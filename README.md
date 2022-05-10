@@ -1,6 +1,6 @@
 # DesmondEnglishRevature1
 
-## Projects Folder:
+## Projects Folder
 
 ## Demos👨🏽‍💻:
 * switchDemo
@@ -17,5 +17,5 @@
 ## P0:
 * Bash Command Calculator 🧮
 
-## cSharpExercises:
+## cSharpExercises
 
