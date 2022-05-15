@@ -15,14 +15,14 @@ namespace DigitalRecordStore
             //Greeting
             Console.WriteLine("Welcome to SpaceTime Records!");
             Console.WriteLine("A Digital Record Store where the Vibes are Celestial!!!!\n ");
-            //Console.WriteLine("What Store would you like to shop at today?");
+            
             Console.WriteLine("Would you like to see a list of stores today?\n");
-            string answer = Console.ReadLine();
+            string listanswer = Console.ReadLine();
 
             DigitalRepoClass drc = new DigitalRepoClass();
             BusinessLayerClass blc = new BusinessLayerClass(drc);
             
-            if (answer.CompareTo("yes") == 0)
+            if (listanswer.CompareTo("yes") == 0)
             {
                 List<StoreClass> stores = blc.StoreClassList();
                 foreach (StoreClass s in stores)
@@ -32,8 +32,8 @@ namespace DigitalRecordStore
             }
 
 
-
-
+            Console.WriteLine("What Store would you like to shop at today?");
+            string storeanswer = Console.ReadLine();
 
 
         }
