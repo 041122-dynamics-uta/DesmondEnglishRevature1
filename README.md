@@ -13,11 +13,12 @@
 * Week #1 = Bash Scripting
 * Week #3 = C# 
 * Week #4 = SQL
+* Week #5 =
+
+## cSharpExercises
 
 ## P0:
 * Bash Command Calculator 🧮
 
-## cSharpExercises
-
-##P1:
+## P1:
 * Store Application 🏪
