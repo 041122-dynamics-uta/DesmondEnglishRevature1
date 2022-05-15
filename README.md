@@ -19,3 +19,5 @@
 
 ## cSharpExercises
 
+##P1:
+* Store Application 🏪
