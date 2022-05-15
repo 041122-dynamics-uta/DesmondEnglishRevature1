@@ -18,6 +18,7 @@ namespace DigitalRecordStore
             
             Console.WriteLine("Would you like to see a list of stores today?\n");
             string listanswer = Console.ReadLine();
+            Console.WriteLine("\n");
 
             DigitalRepoClass drc = new DigitalRepoClass();
             BusinessLayerClass blc = new BusinessLayerClass(drc);
@@ -27,12 +28,12 @@ namespace DigitalRecordStore
                 List<StoreClass> stores = blc.StoreClassList();
                 foreach (StoreClass s in stores)
                 {
-                    Console.WriteLine($"Store {s.StoreName}");
+                    Console.WriteLine($"Store {s.StoreID} is {s.StoreName}");
                 }
             }
 
 
-            Console.WriteLine("What Store would you like to shop at today?");
+            Console.WriteLine("\nWhat Store would you like to shop at today?");
             string storeanswer = Console.ReadLine();
 
 
