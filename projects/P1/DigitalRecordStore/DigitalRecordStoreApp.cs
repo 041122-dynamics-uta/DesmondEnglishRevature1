@@ -154,6 +154,8 @@ namespace DigitalRecordStore
                 Console.WriteLine("You can proceed!");
                 items = false;
             }
+            
+            BoolCheck();
 
             //view current cart then return to shopping 
             Console.WriteLine("\nHere is a mid order receipt!");
@@ -191,6 +193,11 @@ namespace DigitalRecordStore
 
             //sign out & return to top. 
             
+        }
+
+        private static void BoolCheck()
+        {
+            //throw new NotImplementedException();
         }
     }
 }
