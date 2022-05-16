@@ -116,6 +116,7 @@ namespace DigitalRecordStore
                     break;
                 default:
                     Console.WriteLine("That is not an option, Please choose a Store!");
+                    store = true;
                     break;
             }
          }
