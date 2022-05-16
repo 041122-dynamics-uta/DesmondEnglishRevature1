@@ -17,4 +17,18 @@ public class BusinessLayerClass
         List<StoreClass> sc = _repo.StoreClassList();
         return sc;
     }
+
+    public CustomerClass NewCustomer(string sUser, string sPass, string email, string fname, string lname)
+    {
+        CustomerClass c = _repo.NewCustomer(fname, lname, email, sUser, sPass);
+        return c;
+    }
+
+    public List<ProductClass> ProductClassList()
+    {
+        List<ProductClass> pc = _repo.ProductClassList();
+        return pc;
+    }
+
+    
 }

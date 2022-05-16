@@ -12,4 +12,5 @@ namespace DigitalRecordStoreModel
         public int Pswd { get; set; } = 0;
         public DateTime DateCreated { get; set; } = DateTime.Now;
     }
+    
 }
