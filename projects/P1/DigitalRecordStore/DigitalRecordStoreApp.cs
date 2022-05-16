@@ -20,6 +20,7 @@ namespace DigitalRecordStore
             Console.WriteLine("Welcome to SpaceTime Records!");
             Console.WriteLine("A Digital Record Store where the Vibes are Celestial!!!\n ");
             
+
             // Sign in or Sign Up loop
             CustomerClass NewCustomer = new CustomerClass();
             bool sign = true;
@@ -83,7 +84,6 @@ namespace DigitalRecordStore
             Console.WriteLine("\nWhat Store would you like to shop at today?");
             int num = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("\n");
-
             switch (num) 
             {
                 case 4:
@@ -191,13 +191,7 @@ namespace DigitalRecordStore
 
             //sign out & return to top. 
             
-        
-            
-             
         }
     }
 }
-
-
-
 

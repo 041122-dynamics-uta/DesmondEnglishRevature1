@@ -2,20 +2,20 @@
 
 ## Projects Folder
 
-## Demos 👨🏽‍💻:
+## Demos:
 * switchDemo
 * HTML & CSS Practice
 
-## Logic Puzzles 🧠:
+## Logic Puzzles
 * .txt files
 
-## HackerRank Challenges 💻:
+## cSharpExercises
+
+## HackerRank Challenges:
 * Week #1 = Bash Scripting
 * Week #3 = C# 
 * Week #4 = SQL
 * Week #5 =
-
-## cSharpExercises
 
 ## P0:
 * Bash Command Calculator 🧮
