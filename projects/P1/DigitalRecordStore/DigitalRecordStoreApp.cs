@@ -184,7 +184,7 @@ namespace DigitalRecordStore
             
         
 
-
+            Console.WriteLine("Thanks for shopping!");
             //checkout
 
             //view past purchases (date of purchase,item id, item name, quantity, & total cost)
