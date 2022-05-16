@@ -5,6 +5,7 @@ namespace Repo;
 public class DigitalRepoClass 
 {       
     public DigitalMapperClass _mapper { get; set; }
+    public object DateCreated { get; private set; } = string.Empty;
 
     string connectionString = "Server=tcp:marcelenglishserver.database.windows.net,1433;Initial Catalog=marcelenglishDB;Persist Security Info=False;User ID=DesmondEnglishdB;Password=revature$scooler2;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"; 
          
@@ -44,9 +45,9 @@ public class DigitalRepoClass
         throw new NotImplementedException();
     }
 
-    public CustomerClass NewCustomer(string fname, string lname, string email, string sUser, string sPass)
+    public CustomerClass NewCustomer(string fname, string lname, string email, string sUser, string sPass, DateTime dateCreated)
     {
-        string myQuery2 = $"INSERT INTO Customer (FName, LName, Email, UserName, Pswd) Values (@f, @l, @e, @user, @pass);";
+        string myQuery2 = $"INSERT INTO Customer (FName, LName, Email, UserName, Pswd, DateCreated) Values (@f, @l, @e, @user, @pass, @date);";
         using (SqlConnection query2 = new SqlConnection(connectionString))
         {
             SqlCommand command = new SqlCommand(myQuery2, query2);
@@ -55,6 +56,7 @@ public class DigitalRepoClass
             command.Parameters.AddWithValue("@e", email);
             command.Parameters.AddWithValue("@user", sUser);
             command.Parameters.AddWithValue("@pass", sPass);
+            command.Parameters.AddWithValue("@date", DateCreated);
             command.Connection.Open();//open connection to Db
             int results = command.ExecuteNonQuery(); //actually conduct query. 
             query2.Close(); //close connection

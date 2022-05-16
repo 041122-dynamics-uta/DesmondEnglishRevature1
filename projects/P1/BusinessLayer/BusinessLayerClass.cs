@@ -18,9 +18,9 @@ public class BusinessLayerClass
         return sc;
     }
 
-    public CustomerClass NewCustomer(string sUser, string sPass, string email, string fname, string lname)
+    public CustomerClass NewCustomer(string sUser, string sPass, string email, string fname, string lname, DateTime DateCreated)
     {
-        CustomerClass c = _repo.NewCustomer(fname, lname, email, sUser, sPass);
+        CustomerClass c = _repo.NewCustomer(fname, lname, email, sUser, sPass, DateCreated);
         return c;
     }
 
@@ -30,5 +30,8 @@ public class BusinessLayerClass
         return pc;
     }
 
-    
+    // public CustomerClass NewCustomer(string sUser, string sPass, string email, string fname, string lname, object dateCreated)
+    // {
+    //     throw new NotImplementedException();
+    // }
 }

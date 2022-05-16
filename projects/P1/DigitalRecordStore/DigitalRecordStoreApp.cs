@@ -10,6 +10,8 @@ namespace DigitalRecordStore
 {
     class Program
     {
+        private static DateTime DateCreated;
+
         static void Main(string[] args)
         {   
             DigitalRepoClass drc = new DigitalRepoClass();
@@ -50,7 +52,7 @@ namespace DigitalRecordStore
                         string SUser = Console.ReadLine();
                         Console.WriteLine("Enter a Password");
                         string SPass = Console.ReadLine();
-                        NewCustomer = blc.NewCustomer(SUser, SPass, Email, Fname, Lname);
+                        NewCustomer = blc.NewCustomer(SUser, SPass, Email, Fname, Lname, DateCreated);
                         Console.WriteLine($"Hello, {NewCustomer.Fname} {NewCustomer.Lname}");
                         sign = false;
                         break;
