@@ -38,4 +38,63 @@ public class DigitalRepoClass
             return sc;
         }
     }
+
+    public List<CustomerClass> oldCustomerClass()
+    {
+        throw new NotImplementedException();
+    }
+
+    public CustomerClass NewCustomer(string fname, string lname, string email, string sUser, string sPass)
+    {
+        string myQuery2 = $"INSERT INTO Customer (FName, LName, Email, UserName, Pswd) Values (@f, @l, @e, @user, @pass);";
+        using (SqlConnection query2 = new SqlConnection(connectionString))
+        {
+            SqlCommand command = new SqlCommand(myQuery2, query2);
+            command.Parameters.AddWithValue("@f", fname);
+            command.Parameters.AddWithValue("@l", lname);
+            command.Parameters.AddWithValue("@e", email);
+            command.Parameters.AddWithValue("@user", sUser);
+            command.Parameters.AddWithValue("@pass", sPass);
+            command.Connection.Open();//open connection to Db
+            int results = command.ExecuteNonQuery(); //actually conduct query. 
+            query2.Close(); //close connection
+
+            //USE ADO.NET .........
+            if (results == 1)
+            {
+                CustomerClass c = new CustomerClass
+                {
+                    CustomerID = 11,
+                    Fname = fname,
+                    Lname = lname,
+                    Email = email,
+                    UserName = sUser,
+                    Pswd = Int32.Parse(sPass),
+                };
+                return c;
+            }
+            return new CustomerClass();
+        }
+    }
+
+
+    public List<ProductClass> ProductClassList()
+    {
+        string myQuery3 = "SELECT * FROM Products;";
+        using (SqlConnection query3 = new SqlConnection(connectionString))
+        {
+            SqlCommand command = new SqlCommand(myQuery3, query3);
+            command.Connection.Open();//open connection to Db
+            SqlDataReader results = command.ExecuteReader();//actually conduct query.
+
+            List<ProductClass> pc = new List<ProductClass>();
+            while (results.Read())
+            {
+                pc.Add(this._mapper.DboToProduct(results));
+            }
+
+            query3.Close();
+            return pc;
+        }
+    }
 }    
