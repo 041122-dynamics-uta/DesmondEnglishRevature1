@@ -16,10 +16,14 @@ namespace DigitalRecordStore
             BusinessLayerClass blc = new BusinessLayerClass(drc);
 
             
-            //Greeting
-            Console.WriteLine("Welcome to SpaceTime Records!");
-            Console.WriteLine("A Digital Record Store where the Vibes are Celestial!!!\n ");
+            Greeting();
             
+            //Greeting
+            void Greeting() 
+            { 
+                Console.WriteLine("Welcome to SpaceTime Records!");
+                Console.WriteLine("A Digital Record Store where the Vibes are Celestial!!!\n ");
+            }
 
             // Sign in or Sign Up loop
             CustomerClass NewCustomer = new CustomerClass();
