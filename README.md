@@ -15,7 +15,7 @@
 * Week #1 = Bash Scripting
 * Week #3 = C# 
 * Week #4 = SQL
-* Week #5 =
+* Week #5 = C#
 
 ## P0:
 * Bash Command Calculator 🧮
