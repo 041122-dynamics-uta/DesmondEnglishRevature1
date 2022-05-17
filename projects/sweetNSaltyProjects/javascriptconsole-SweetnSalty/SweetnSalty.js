@@ -1,5 +1,12 @@
+// var number = new Array(1000);
+//         for (var i = 0; i < 1000; i++) {
+//             number[i] = i + 1; //This populates the array.  +1 is necessary because arrays are 0 index based and you want to store 1-1000 in it, NOT 0-999.
+//         }
 
-
+//         for (var i = 0; i < number.length; i++) {
+//             console.log(number[i]); //This prints the values that you stored in the array
+//         }
+console.log("Hello");
 
 // Print the numbers 1 to 1000 to the console. 
 // Print the numbers in groups of 20 per line with one space separating each number.  
