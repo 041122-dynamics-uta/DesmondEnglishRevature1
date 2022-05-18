@@ -46,14 +46,11 @@
         //console.log(`${numbers[i]}`);
     
 
-
+        console.log("Here are the results!!!");
         // After the numbers have all been printed, print out: 
-        // How many "Sweet”
-        // how many "Salty”  
-        // how many "Sweet’nSalty" 
-        console.log(`Total Sweet ~ ${sweet}`);
-        console.log(`Total Salty ~ ${salty}`);
-        console.log(`Total Sweet'nSalty ~ ${swns}`);
+        console.log(`Total Sweet ~ ${sweet}`); // How many "Sweet”
+        console.log(`Total Salty ~ ${salty}`); // how many "Salty” 
+        console.log(`Total Sweet'nSalty ~ ${swns}`); // how many "Sweet’nSalty" 
         // When the number is a multiple of three, print “Sweet” instead of the number on the console. 
         // If the number is a multiple of five, print “Salty” (instead of the number) to the console.    
         // For numbers which are multiples of three and five, print “Sweet’nSalty” to the console (instead of the number).    
