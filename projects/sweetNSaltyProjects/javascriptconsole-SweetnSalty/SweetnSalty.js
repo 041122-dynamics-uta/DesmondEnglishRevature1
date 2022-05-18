@@ -9,7 +9,7 @@
         let swns = 0;
         
         //count
-        let x = 0;
+        //let x = 0;
 
         for (var i = 1; i < 1000; i++) {
             numbers[i] = i; //This populates the array.  i = 1 is necessary because arrays are 0 index based and you want to store 1-1000 in it, NOT 0-999.
