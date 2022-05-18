@@ -19,8 +19,8 @@
 
 ## Sweet'nSalty:
 * C# Console Sweet 'n Salty
-* * JavaScript Console Sweet 'n Salty
-* * JavaScript/HTML/CSS Sweet 'n Salty
+* JavaScript Console Sweet 'n Salty
+* JavaScript/HTML/CSS Sweet 'n Salty
 
 ## P0:
 * Bash Command Calculator 🧮
