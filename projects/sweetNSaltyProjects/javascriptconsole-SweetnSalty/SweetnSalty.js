@@ -7,7 +7,8 @@
         let sweet = 0;
         let salty = 0;
         let swns = 0;
-        //string concantenation - Salina helped with getting to print on seperate lines!
+        //string concantenation - 
+        //Salina & Jasiel helped with getting to print on seperate lines!
         let str = "";
         
         //count
