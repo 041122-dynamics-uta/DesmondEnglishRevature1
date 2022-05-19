@@ -191,15 +191,10 @@ namespace DigitalRecordStore
                 }
             }
             
-        
-
             Console.WriteLine("Thanks for shopping!");
             //checkout
-
             //view past purchases (date of purchase,item id, item name, quantity, & total cost)
-
             //sign out & return to top. 
-            
         }
 
         private static void BoolCheck()
