@@ -7,7 +7,7 @@
         let sweet = 0;
         let salty = 0;
         let swns = 0;
-        //string concantenation 
+        //string concantenation - Salina helped with getting to print on seperate lines!
         let str = "";
         
         //count
@@ -22,15 +22,20 @@
             // }
                 if (i%5==0 && i%3==0) {
                 str += "Sweet'nSalty ";
+                //console.log("Sweet'nSalty");
                 swns++;
             } else if(i%3==0) {
                 str += "Sweet ";
+                //console.log("Sweet");
                 sweet++;
             } else if(i%5==0){
                 str += "Salty ";
+                //console.log("Salty");
                 salty++;
             } else {
                 str += `${i} `;
+                //console.log(numbers[i]);
+
             }
 
             //Print the numbers in groups of 20 per line with one space separating each number.  
