@@ -7,7 +7,7 @@
     <title>JavascriptInteractive</title>
     <style>
         body{
-            background-color: peru;
+            background-color: rgb(106, 134, 199);
             text-align: center;
         }
 
@@ -114,7 +114,7 @@
             endnum = inputenum.value;
             document.body.innerHTML = "";
             if (validate(startnum, endnum)) {
-                sweetAndSalty(startnum, endnum);
+                calculate(startnum, endnum);
             }
             document.body.appendChild(submitR);
         })
@@ -144,44 +144,55 @@
                 error.className = 'errors';
                 error.innerText = "Start and final numbers must be less than 10000 numbers apart.";
                 return false;
-            } else if (endnum <= startnum)  {
-                document.body.appendChild(error);
-                error.className = 'errors';
-                error.innerText = "Starting number must be less than final number.";
-                return false;
-            } else {
+            }  else {
                 
                 return true;
             }
         } 
-        
-        // calculations
-        function sweetAndSalty(startnum, endnum) {
+
+        function calculate(startnum, endnum)
+        {
             let sweetCount = 0;
             let saltyCount = 0;
             let sweetNSaltyCount = 0;
             let str = "";
-            
-            // 40 numbers per line
-            while (startnum <= endnum) {
-                for (let i = 0; i < 40; i++) {
-                    if (startnum % 5 === 0 && startnum % 3 === 0) {
-                        str += "<span>SweetnSalty </span>";
-                        sweetNSaltyCount++;
-                    } else if (startnum % 3 === 0) {
-                        str += "<span>Sweet </span>";
-                        sweetCount++;
-                    } else if (startnum % 5 === 0) {
-                        str += "<span>Salty </span>";
-                        saltyCount++;
-                    } else {
-                        str += `${startnum.toLocaleString()} `;
-                    }
-                    if (startnum === endnum) {
-                        break;
-                    }
-                    startnum++;
+            let range = endnum - startnum;
+
+            let sum = 0;
+
+            var nums = [];
+            for(let x = 0; x <= range; x++)
+            {
+                sum = parseInt(startnum) + parseInt(x); // convert to integer to avoid problems
+                nums.push(sum);
+            }
+
+            for(let i = 0; i < nums.length; i++)
+            {
+                if(nums[i] % 3 == 0 && nums[i] % 5 == 0)
+                {
+                    sweetNSaltyCount++;
+                    str += "<span>SweetnSalty </span>";
                 }
+
+                else if(nums[i] % 3 == 0)
+                {
+                    sweetCount++;
+                    str += "<span>Salty </span>";
+
+                }
+                else if(nums[i] % 5 == 0)
+                {
+                    saltyCount++;
+                }
+                else
+                {
+                    str += `${startnum.toLocaleString()} `;
+                }
+                if (startnum === endnum) {
+                                break;
+                            }
+                            startnum++;
             }
             //TEXT Output
             output.innerHTML = `${str}`;
@@ -194,7 +205,5 @@
             sweetNSaltyFinalCount.innerText = `Total Sweet'nSalty ~ ${sweetNSaltyCount}`;
         }
     </script>
-
-
 </body>
 </html>
