@@ -1,28 +1,6 @@
-//#region 
-// Game progression: 
-// Start with a screen that explains the game and how the user will input their choices.   
-// Each step is visible only after the previous step has been successfully completed. 
-// Present a start button.  
-// Step 1: The user enters the number to start with. Then they click the Enter button.  
-// Step 2: The user enters the number to finish with. Then they click the Enter button. 
-// Step 3: Print Sweet, Salty, Sweet'nSalty, and the numbers to the screen as the user instructed.  
-// Step 4: Print the total number of Sweet, Salty, and Sweet’nSalty after printing the numbers and words. 
-// Step 5: After all the numbers have been printed, present a button allowing the user to delete everything and restart. 
-//#endregion
-                // let welcome = document.body
-                // let firstdiv = document.createElement("div")
-                // firstdiv.innerText = "Welcome to the Trail Mix Hunger Games 2022!!!"
-                // welcome.append(firstdiv)
-                // let rules = document.body
-                // let seconddiv = document.createElement("div")
-                // seconddiv.innerText = "Here are the Rules:"
-                // rules.append(seconddiv)
-                // document.write("<br>");
-                // document.write("Welcome to the Trail Mix Hunger Games 2022!!!<br>");
-                // document.write("<br>Here are the Rules:");
-                // document.write("Want to play click the button!");
-                // document.write("<br>");
-
+        /* Salina helped clarify a lot and helped with coding */
+        
+        
         //Display welcome text and game explanation
         const greeting = document.createElement('h1');
         document.body.append(greeting);
@@ -31,49 +9,46 @@
         const rule = document.createElement('h2');
         document.body.append(rule);
         rule.innerText = "Here are the Rules:"
-
+        
         const rules = document.createElement('h3');
         document.body.append(rules);
         rules.innerText = "First, I will ask for a number starting a range?\nNext, I will ask for a second number to exit the range?\n\n After the calculations are done numbers will print accordingly:\n\n If the number is a multiple of three, 'Sweet' will print.\n If the number is a multiple of five, 'Salty' will print.\n Lastly if the numbers which are multiples of three and five, Sweet'nSalty will print instead of the number.\n\n To Survive Click START!"
-
+        
         // Button Creation 
         // click start to start button, first enter number button
         // second enter button, calculate button
         let startB = document.createElement('button');
         document.body.append(startB);
         startB.innerText = "START!";
-
+        
         let firstnum = document.createElement("h4")
         let inputsnum = document.createElement("input")
         let submitsnum = document.createElement("button")
         submitsnum.innerText = "ENTER"
         let startnum = 0
-
+        
         let secondnum = document.createElement('h4');
         let inputenum = document.createElement('input');
         let submitenum = document.createElement('button');
         submitenum.innerText = "ENTER";
         let endnum = 0
-
-        //create html element h5 for error
-        let error = document.createElement('h5');
         
-        //create html element p for sweetsalty output
+        
+        let error = document.createElement('h5');
         let output = document.createElement('p');
-
-        //create elements to print the total number of Sweet, Salty, and Sweet’nSalty
+        
+        // p elements
         let sweetFinalCount = document.createElement('p');
         let saltyFinalCount = document.createElement('p');
         let sweetNSaltyFinalCount = document.createElement('p');
-
-        //create restart button
-        let submitR = document.createElement('button');
-        //add text to button
-        submitR.innerText = "RESTART";
-
-
         
-         //add click event listener to start button
+        // restart button
+        let submitR = document.createElement('button');
+        submitR.innerText = "RESTART";
+        
+        
+        
+        // click event listener to start button
         startB.addEventListener('click', () => {
             document.body.innerHTML = "";
             document.body.appendChild(firstnum);
@@ -81,8 +56,8 @@
             document.body.appendChild(inputsnum);
             document.body.appendChild(submitsnum);          
         });
-
-        // on enter button click event do the following:
+        
+        //  enter button click event do the following:
         submitsnum.addEventListener('click', () => {
             startnum = inputsnum.value;
             document.body.innerHTML = "";
@@ -92,8 +67,8 @@
             document.body.appendChild(submitenum);
         });
         
-
-        //on enter button click event do the following:
+        
+        // enter button click event do the following:
         submitenum.addEventListener('click', () => {
             endnum = inputenum.value;
             document.body.innerHTML = "";
@@ -102,16 +77,18 @@
             }
             document.body.appendChild(submitR);
         })
-
-        //on restart button click:
+        
+        // restart button click:
         submitR.addEventListener('click', () => {
             location.reload();
         })
         
         //input validation
         function validate(startnum, endnum) {
-            //no negative numbers
-            //starting num or final num is less than 0 
+            // postive numbers only
+            // at least 200 numbers apart
+            // no more than 10,000 numbers apart
+
             if (startnum < 0 || endnum < 0) {
                 document.body.appendChild(error);
                 error.className = 'errors';
@@ -137,7 +114,7 @@
                 return true;
             }
         } 
-
+        
         // calculations
         function sweetAndSalty(startnum, endnum) {
             let sweetCount = 0;
@@ -145,6 +122,7 @@
             let sweetNSaltyCount = 0;
             let str = "";
             
+            // 40 numbers per line
             while (startnum <= endnum) {
                 for (let i = 0; i < 40; i++) {
                     if (startnum % 5 === 0 && startnum % 3 === 0) {
@@ -165,6 +143,7 @@
                     startnum++;
                 }
             }
+            //TEXT Output
             output.innerHTML = `${str}`;
             document.body.appendChild(output);
             document.body.appendChild(sweetFinalCount);
@@ -173,8 +152,22 @@
             saltyFinalCount.innerText = `Total Salty ~ ${saltyCount}`;
             document.body.appendChild(sweetNSaltyFinalCount);
             sweetNSaltyFinalCount.innerText = `Total SweetNSalty ~ ${sweetNSaltyCount}`;
-} 
-
+        } 
+        
+        
+        // let welcome = document.body
+        // let firstdiv = document.createElement("div")
+        // firstdiv.innerText = "Welcome to the Trail Mix Hunger Games 2022!!!"
+        // welcome.append(firstdiv)
+        // let rules = document.body
+        // let seconddiv = document.createElement("div")
+        // seconddiv.innerText = "Here are the Rules:"
+        // rules.append(seconddiv)
+        // document.write("<br>");
+        // document.write("Welcome to the Trail Mix Hunger Games 2022!!!<br>");
+        // document.write("<br>Here are the Rules:");
+        // document.write("Want to play click the button!");
+        // document.write("<br>");
 
         // function first() {
         //     document.getElementById("firsts").innerHTML = "Start Here";
@@ -212,8 +205,6 @@
         // Delete button - restart(play again)
         // document.write("<br>Can you survive the Trail Mix Hunger Games again?");
         // document.write("<br>");
-
- 
 
 //#region 
 // Instructions
