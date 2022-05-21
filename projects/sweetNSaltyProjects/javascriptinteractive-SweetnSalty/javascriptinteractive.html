@@ -19,17 +19,11 @@
     </style>
 </head>
 <body>
-    
     <!-- <style>#myForm1 {display: none;}
         #myForm2 {display: none;}
         #calculations {display: none;}</style>
-
         <h1>Welcome to the Trail Mix Hunger Games 2022!!!</h1>
         <h2>Here are the Rules:<br></h2>
-        <h3>First, I will ask for a number starting a range?<br>Next, I will ask for the second number to exit the range?</h3>
-    <h3>After the calculations the number will print accordingly:</h3>
-    <h3>If the number is a multiple of three, 'Sweet' will print.<br>If the number is a multiple of five, 'Salty' will print.<br>Lastly if the numbers which are multiples of three and five, "Sweet'nSalty" will print instead of the number.</h3>
-    <h3>To play Click START!</h3>
    <button onclick="first()">START</button>
     <div> 
     <p id="firsts"></p>
@@ -47,6 +41,158 @@
     </div> 
     </div>-->
 
-    <script src="javascriptinteractive.js"></script>
+    <script type="text/javascript">
+        
+        /* Salina helped clarify a lot and helped with coding */
+        
+        //Display welcome text and game explanation
+        const greeting = document.createElement('h1');
+        document.body.append(greeting);
+        greeting.innerText = "Welcome to the Trail Mix Hunger Games 2022!!!"
+        
+        const rule = document.createElement('h2');
+        document.body.append(rule);
+        rule.innerText = "Here are the Rules:"
+        
+        const rules = document.createElement('h3');
+        document.body.append(rules);
+        rules.innerText = "First, I will ask for a number starting a range?\nNext, I will ask for a second number to exit the range?\n\n After the calculations are done numbers will print accordingly:\n\n If the number is a multiple of three, 'Sweet' will print.\n If the number is a multiple of five, 'Salty' will print.\n Lastly if the numbers which are multiples of three and five, Sweet'nSalty will print instead of the number.\n\n To Survive Click START!"
+        
+        // Button Creation 
+        // click start to start button, first enter number button
+        // second enter button, calculate button
+        let startB = document.createElement('button');
+        document.body.append(startB);
+        startB.innerText = "START!";
+        
+        let firstnum = document.createElement("h4")
+        let inputsnum = document.createElement("input")
+        let submitsnum = document.createElement("button")
+        submitsnum.innerText = "ENTER"
+        let startnum = 0
+        
+        let secondnum = document.createElement('h4');
+        let inputenum = document.createElement('input');
+        let submitenum = document.createElement('button');
+        submitenum.innerText = "ENTER";
+        let endnum = 0
+        
+        
+        let error = document.createElement('h5');
+        let output = document.createElement('p');
+        
+        // p elements
+        let sweetFinalCount = document.createElement('p');
+        let saltyFinalCount = document.createElement('p');
+        let sweetNSaltyFinalCount = document.createElement('p');
+        
+        // restart button
+        let submitR = document.createElement('button');
+        submitR.innerText = "RESTART";
+        
+        // click event listener to start button
+        startB.addEventListener('click', () => {
+            document.body.innerHTML = "";
+            document.body.appendChild(firstnum);
+            firstnum.innerText = "Enter your first number";
+            document.body.appendChild(inputsnum);
+            document.body.appendChild(submitsnum);          
+        });
+        
+        //  enter button click event do the following:
+        submitsnum.addEventListener('click', () => {
+            startnum = inputsnum.value;
+            document.body.innerHTML = "";
+            document.body.appendChild(secondnum);
+            secondnum.innerText = "Enter your second number";
+            document.body.appendChild(inputenum);
+            document.body.appendChild(submitenum);
+        });
+        
+        // enter button click event do the following:
+        submitenum.addEventListener('click', () => {
+            endnum = inputenum.value;
+            document.body.innerHTML = "";
+            if (validate(startnum, endnum)) {
+                sweetAndSalty(startnum, endnum);
+            }
+            document.body.appendChild(submitR);
+        })
+        
+        // restart button click:
+        submitR.addEventListener('click', () => {
+            location.reload();
+        })
+        
+        //input validation
+        function validate(startnum, endnum) {
+            // postive numbers only
+            // at least 200 numbers apart
+            // no more than 10,000 numbers apart
+            if (startnum < 0 || endnum < 0) {
+                document.body.appendChild(error);
+                error.className = 'errors';
+                error.innerText = "Enter a number greater than 0";
+                return false;
+            } else if ((endnum - startnum) < 200) {
+                document.body.appendChild(error);
+                error.className = 'errors';
+                error.innerText = "Start and final numbers must be more than 200 numbers apart.";
+                return false;
+            } else if ((endnum - startnum) > 10000) {
+                document.body.appendChild(error);
+                error.className = 'errors';
+                error.innerText = "Start and final numbers must be less than 10000 numbers apart.";
+                return false;
+            } else if (endnum <= startnum)  {
+                document.body.appendChild(error);
+                error.className = 'errors';
+                error.innerText = "Starting number must be less than final number.";
+                return false;
+            } else {
+                
+                return true;
+            }
+        } 
+        
+        // calculations
+        function sweetAndSalty(startnum, endnum) {
+            let sweetCount = 0;
+            let saltyCount = 0;
+            let sweetNSaltyCount = 0;
+            let str = "";
+            
+            // 40 numbers per line
+            while (startnum <= endnum) {
+                for (let i = 0; i < 40; i++) {
+                    if (startnum % 5 === 0 && startnum % 3 === 0) {
+                        str += "<span>SweetnSalty </span>";
+                        sweetNSaltyCount++;
+                    } else if (startnum % 3 === 0) {
+                        str += "<span>Sweet </span>";
+                        sweetCount++;
+                    } else if (startnum % 5 === 0) {
+                        str += "<span>Salty </span>";
+                        saltyCount++;
+                    } else {
+                        str += `${startnum.toLocaleString()} `;
+                    }
+                    if (startnum === endnum) {
+                        break;
+                    }
+                    startnum++;
+                }
+            }
+            //TEXT Output
+            output.innerHTML = `${str}`;
+            document.body.appendChild(output);
+            document.body.appendChild(sweetFinalCount);
+            sweetFinalCount.innerText = `Total Sweet ~ ${sweetCount}`;
+            document.body.appendChild(saltyFinalCount);
+            saltyFinalCount.innerText = `Total Salty ~ ${saltyCount}`;
+            document.body.appendChild(sweetNSaltyFinalCount);
+            sweetNSaltyFinalCount.innerText = `Total Sweet'nSalty ~ ${sweetNSaltyCount}`;
+        }
+    </script>
 </body>
 </html>
