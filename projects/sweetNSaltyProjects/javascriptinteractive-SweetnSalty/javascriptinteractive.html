@@ -16,6 +16,11 @@
             background-color: #21b842;
             color: white;
         }
+
+        h5 {
+            color: red;
+            background-color: black;
+        }
     </style>
 </head>
 <body>
@@ -137,12 +142,12 @@
             } else if ((endnum - startnum) < 200) {
                 document.body.appendChild(error);
                 error.className = 'errors';
-                error.innerText = "Start and final numbers must be more than 200 numbers apart.";
+                error.innerText = "Start and Ending numbers must be more than 200 numbers apart.";
                 return false;
             } else if ((endnum - startnum) > 10000) {
                 document.body.appendChild(error);
                 error.className = 'errors';
-                error.innerText = "Start and final numbers must be less than 10000 numbers apart.";
+                error.innerText = "Start and Ending numbers must be less than 10000 numbers apart.";
                 return false;
             }  else {
                 
