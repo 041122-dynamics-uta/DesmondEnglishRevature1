@@ -83,10 +83,11 @@ namespace DigitalRecordStore
             //What store would you like to shop at? 
             //switch case Store picker
             bool store = true;
+            int num;
             while(store == true)
             { 
             Console.WriteLine("\nWhat Store would you like to shop at today?");
-            int num = Convert.ToInt32(Console.ReadLine());
+            num = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("\n");
             switch (num) 
             {

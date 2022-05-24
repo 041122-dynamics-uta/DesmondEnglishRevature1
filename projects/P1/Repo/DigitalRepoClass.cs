@@ -97,4 +97,24 @@ public class DigitalRepoClass
             return pc;
         }
     }
+
+    // public List<ProductClass> ProductClassList()
+    // {
+    //     string myQuery3 = "SELECT * FROM Products;";
+    //     using (SqlConnection query3 = new SqlConnection(connectionString))
+    //     {
+    //         SqlCommand command = new SqlCommand(myQuery3, query3);
+    //         command.Connection.Open();//open connection to Db
+    //         SqlDataReader results = command.ExecuteReader();//actually conduct query.
+
+    //         List<ProductClass> pc = new List<ProductClass>();
+    //         while (results.Read())
+    //         {
+    //             pc.Add(this._mapper.DboToProduct(results));
+    //         }
+
+    //         query3.Close();
+    //         return pc;
+    //     }
+    // }
 }    
