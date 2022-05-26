@@ -5,6 +5,7 @@
 ## Demos:
 * switchDemo
 * HTML & CSS Practice
+* Sort Function Power App
 
 ## Logic Puzzles
 * .txt files
