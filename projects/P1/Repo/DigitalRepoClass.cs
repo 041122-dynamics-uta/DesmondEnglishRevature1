@@ -6,8 +6,6 @@ public class DigitalRepoClass
 {       
     public DigitalMapperClass _mapper { get; set; }
     public object DateCreated { get; private set; } = string.Empty;
-
-    string connectionString = "Server=tcp:marcelenglishserver.database.windows.net,1433;Initial Catalog=marcelenglishDB;Persist Security Info=False;User ID=DesmondEnglishdB;Password=revature$scooler2;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"; 
          
      public DigitalRepoClass()
     {
