@@ -29,3 +29,6 @@
 ## P1:
 * Store Application 🏪
 
+## P2 Canvas App:
+* Store Application 🏪
+
